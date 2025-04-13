@@ -1,24 +1,84 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+# Dependencies  
+node_modules/  
+.pnp/  
+.pnp.js  
 
-node_modules
-dist
-dist-ssr
-*.local
+# Build outputs  
+dist/  
+build/  
+coverage/  
+out/  
+.next/  
+.nuxt/  
+.output/  
+.vite/  
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+# Environment variables  
+.env  
+.env.local  
+.env.development.local  
+.env.test.local  
+.env.production.local  
+.env.development  
+.env.production  
+
+# Video files (exclude large media files)  
+*.mp4  
+*.webm  
+*.mov  
+*.avi  
+*.mkv  
+*.flv  
+*.wmv  
+*.ogg  
+# Uncomment the next line if you want to track video files with Git LFS  
+# !videos/*.mp4  
+
+# Logs  
+logs  
+*.log  
+npm-debug.log*  
+yarn-debug.log*  
+yarn-error.log*  
+pnpm-debug.log*  
+lerna-debug.log*  
+
+# Editor directories and files  
+.vscode/*  
+!.vscode/extensions.json  
+!.vscode/settings.json  
+.idea/  
+.DS_Store  
+*.suo  
+*.ntvs*  
+*.njsproj  
+*.sln  
+*.sw?  
+*.sublime-workspace  
+*.sublime-project  
+
+# Testing  
+/coverage  
+/.nyc_output  
+
+# TypeScript  
+*.tsbuildinfo  
+next-env.d.ts  
+
+# Misc  
+.cache/  
+temp/  
+tmp/  
+.temp/  
+.tmp/  
+*.pem  
+.vercel  
+.turbo  
+
+# Debug  
+.eslintcache  
+.stylelintcache  
+
+# Custom  
+.serverless/  
+.webpack/

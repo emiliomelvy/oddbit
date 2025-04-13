@@ -1,0 +1,38 @@
+.app-container {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  min-width: 1250px;
+}
+
+header button {
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+header button:hover {
+  background-color: #3367d6;
+}
+
+.single-player-container {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 70vh;
+  margin: 0 auto;
+}
+
+main {
+  height: calc(100vh - 120px);
+}
