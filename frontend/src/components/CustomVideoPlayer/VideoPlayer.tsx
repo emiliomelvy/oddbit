@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { VideoPlayerProps } from "../../types/video";
 import { useVideoControls } from "../../hooks/useVideoControls";
 import CanvasRenderer from "./CanvasRenderer";
+import Controls from "./Controls";
+import Overlay from "./Overlay";
 import LoadingState from "./LoadingState";
 import ErrorState from "./ErrorState";
 
@@ -9,12 +11,24 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   source,
   autoPlay = false,
   muted = false,
+  watermark,
   onError,
   width = "100%",
   height = "auto",
 }) => {
-  const { videoRef, canvasRef, loading, error, retryOnError } =
-    useVideoControls();
+  const {
+    videoRef,
+    canvasRef,
+    controls,
+    loading,
+    error,
+    togglePlay,
+    handleMute,
+    handleVolumeChange,
+    handleSeek,
+    toggleFullscreen,
+    retryOnError,
+  } = useVideoControls();
 
   useEffect(() => {
     if (error && onError) {
@@ -59,6 +73,19 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
         canvasRef={canvasRef}
         width={width}
         height={height}
+      />
+      <Overlay
+        watermark={watermark}
+        timestamp={controls.currentTime}
+        duration={controls.duration}
+      />
+      <Controls
+        controls={controls}
+        onTogglePlay={togglePlay}
+        onMute={handleMute}
+        onVolumeChange={handleVolumeChange}
+        onSeek={handleSeek}
+        onToggleFullscreen={toggleFullscreen}
       />
       {loading && <LoadingState />}
       {error && <ErrorState error={error} onRetry={retryOnError} />}
