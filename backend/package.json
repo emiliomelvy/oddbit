@@ -1,0 +1,27 @@
+{
+  "name": "video-streaming-backend",
+  "version": "1.0.0",
+  "description": "Video streaming backend service",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "fs-extra": "^11.1.1",
+    "range-parser": "^1.2.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/fs-extra": "^11.0.1",
+    "@types/node": "^18.15.11",
+    "@types/range-parser": "^1.2.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  }
+}
